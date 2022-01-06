@@ -10,5 +10,3 @@ eslint:
     - nvm install $NODE_VERSION
     - npm install
     - npm run lint
-
-  
