@@ -18,10 +18,10 @@ eslint:
     - npm install
     - npm run lint
   
-prettier:
-  image: node:14.17.0-alpine
-  stage: lint
-  script:
-    - npm install
-    - npm run check:format 
+# prettier:
+#   image: node:14.17.0-alpine
+#   stage: lint
+#   script:
+#     - npm install
+#     - npm run check:format 
 
