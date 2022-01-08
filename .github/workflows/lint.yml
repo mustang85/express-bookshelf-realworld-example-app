@@ -1,7 +1,7 @@
 name: lint
 
-on: 
-  push: 
+on:
+  push:
     branches: [main]
   pull_request:
     branches: [main]
@@ -19,13 +19,12 @@ jobs:
         with:
           path: ~/.npm
           key: ${{ env.cache-name }}
-          restore-key:
-            ${{ env.cache-name }}
+          restore-key: ${{ env.cache-name }}
       - name: Install dependencies
         run: npm install
       - name: Lint source code with ESLint
         run: npm run lint
-    
+
   prettier:
     container:
       image: node:14.17.0-alpine
@@ -38,8 +37,7 @@ jobs:
         with:
           path: ~/.npm
           key: ${{ env.cache-name }}
-          restore-key:
-            ${{ env.cache-name }}
+          restore-key: ${{ env.cache-name }}
       - name: Install dependencies
         run: npm install
       - name: Lint source code with ESLint
